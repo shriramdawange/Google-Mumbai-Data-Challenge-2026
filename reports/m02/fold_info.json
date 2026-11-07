@@ -1,0 +1,27 @@
+[
+  {
+    "fold": "F0_winter_dec",
+    "n_train": 41406,
+    "n_eval": 23
+  },
+  {
+    "fold": "F1_winter_jan",
+    "n_train": 45616,
+    "n_eval": 16
+  },
+  {
+    "fold": "F2_aug",
+    "n_train": 74232,
+    "n_eval": 14
+  },
+  {
+    "fold": "F3_oct5",
+    "n_train": 80583,
+    "n_eval": 32
+  },
+  {
+    "fold": "F4_oct20",
+    "n_train": 82962,
+    "n_eval": 15
+  }
+]
