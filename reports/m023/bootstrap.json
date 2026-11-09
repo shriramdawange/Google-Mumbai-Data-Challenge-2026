@@ -1,0 +1,11 @@
+{
+  "n_boot": 10000,
+  "p_B4_better_B3": 0.0,
+  "p_B4_better_RF": 0.6899,
+  "mean_diff_B3minusB4": 0.0,
+  "mean_diff_RFminusB4": 15.00572630908,
+  "ci_B4_rmse": [
+    13.491752833865725,
+    33.297489247624554
+  ]
+}

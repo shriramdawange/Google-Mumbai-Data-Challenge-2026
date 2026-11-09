@@ -1,0 +1,6 @@
+{
+  "n_with_obs_gt100": 4,
+  "note": "19 train anomalies >1000 excluded from features/targets; eval set keeps 300-1000 targets",
+  "rf_rmse_gt100": 161.47875772969405,
+  "b4_rmse_gt100": 161.47675700118378
+}
