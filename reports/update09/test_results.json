@@ -1,0 +1,9 @@
+{
+  "test_rows_old": 2592,
+  "test_rows_new": 2592,
+  "test_order_same": true,
+  "sample_rows_old": 2592,
+  "sample_rows_new": 2592,
+  "output_rows": 48133,
+  "dup_keys": 0
+}

@@ -1,0 +1,14 @@
+{
+  "lineage": [
+    "data/Train.csv (Nov-2 snapshot)",
+    "UPDATE-09/Train.csv (Nov-9 release)"
+  ],
+  "union_rule": "new wins on conflict, old kept if key missing in new; pm25>1000 kept raw, cleaning deferred to pipeline (pm25_clean rule unchanged)",
+  "records_before": 47849,
+  "records_new": 48133,
+  "records_after": 48133,
+  "cutoff_old": "2026-11-02 23:00:00+05:30",
+  "cutoff_new": "2026-11-09 07:00:00+05:30",
+  "output_sha256": "5a50da1a0065af35674d5fd2025747a3e25f572418f6e0d1931b7eede4b054c5",
+  "output_bytes": 641299
+}

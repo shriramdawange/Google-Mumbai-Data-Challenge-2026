@@ -1,0 +1,28 @@
+{
+  "nulls": {
+    "timestamp_ist": 0,
+    "mean": 0,
+    "count": 0,
+    "available_at": 0,
+    "pm25": 0,
+    "location_id": 0,
+    "sensor_id": 0,
+    "station_name": 0,
+    "series_id": 0,
+    "flag_high_1000": 0
+  },
+  "dup_keys": 0,
+  "bad_ts": 0,
+  "stations": [
+    11606,
+    11611,
+    3409510,
+    3409511
+  ],
+  "pm25_min": 0.0,
+  "pm25_max": 241587.56333333332,
+  "pm25_negative": 0,
+  "flag_true": 19,
+  "sorted_chrono": true,
+  "mono_per_station": true
+}

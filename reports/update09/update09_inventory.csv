@@ -1,0 +1,18 @@
+filename,size_bytes,sha256,schema,rows,cols
+AdditionalHistory.zip,4817970,3233061ca4ac2af39e9f6e80e21d9261b1b8d2fd3b037e5d034bcec059a7e80e,archive/binary (not parsed),,
+DataDictionary.txt,3499,fd05ea59917978574d5e89feded505510a646f0800ab78541247a6a5ad0ec4d3,"Data dictionary
+
+The prediction target is hourly PM2.5 concentration in Âµg/mÂ³. All target
+intervals use IST (UTC+05:30). Train timestamps mark the end of the hour.
+
+Train.csv
+timestamp_ist: end of the hourly observation interval.
+pm25: observed hourly PM2.5 concentration; the training target.
+mean: the same concentration as pm25, retained from the source aggregation.
+count: number of valid unique quarter-hour readings used; at least three.
+available_at: retained source-file modification time f",,
+Mumbai_Air_Quality_Starter.ipynb,376317,e824643f479fe22a4fe67d43c6b73d815b459394584d6d1ff2f0f6cbd797b8b1,archive/binary (not parsed),,
+SampleSubmission.csv,80363,ee4682ce0e546c1b62beb4a08414a5ddc831fa962cff30e8a823d6b6b0e0c72f,"['ID', 'Target']",2592.0,2.0
+Stations.csv,369,383269fa04abf8f2eb49e5ec0bb5a77c2df11acb6aca996b7edf269a109ee9cf,"['location_id', 'station_name', 'selected_sensor', 'latitude', 'longitude', 'timezone']",4.0,6.0
+Test.csv,296429,e7b9cc8859beb939276c958393e148adae55229c34f99dcb2555fe4ac13b28db,"['ID', 'location_id', 'sensor_id', 'target_start_ist', 'target_end_ist', 'scoring_block', 'unit']",2592.0,7.0
+Train.csv,6797848,11d6c4a4b20cc9ccf212b5e5f683ff5cc41f032fa0681e461b22fe0bd41047ee,"['timestamp_ist', 'mean', 'count', 'available_at', 'pm25', 'location_id', 'sensor_id', 'station_name', 'series_id', 'flag_high_1000']",48133.0,10.0

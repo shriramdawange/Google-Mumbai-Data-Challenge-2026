@@ -1,0 +1,70 @@
+{
+  "old_shape": [
+    47849,
+    10
+  ],
+  "new_shape": [
+    48133,
+    10
+  ],
+  "old_range": [
+    "2025-02-19 03:00:00+05:30",
+    "2026-11-02 23:00:00+05:30"
+  ],
+  "new_range": [
+    "2025-02-19 03:00:00+05:30",
+    "2026-11-09 07:00:00+05:30"
+  ],
+  "added": 284,
+  "removed": 0,
+  "common": 47849,
+  "revised": 0,
+  "per_station_added": {
+    "11606": 71,
+    "11611": 73,
+    "3409510": 68,
+    "3409511": 72
+  },
+  "pm25_old": {
+    "mean": 43.99025536932155,
+    "median": 21.83666666666667,
+    "std": 1311.7747215364104,
+    "max": 241587.56333333332,
+    "n1000": 19
+  },
+  "pm25_new": {
+    "mean": 44.02738890158519,
+    "median": 21.96,
+    "std": 1307.9035172603976,
+    "max": 241587.56333333332,
+    "n1000": 19
+  },
+  "columns_old": [
+    "timestamp_ist",
+    "mean",
+    "count",
+    "available_at",
+    "pm25",
+    "location_id",
+    "sensor_id",
+    "station_name",
+    "series_id",
+    "flag_high_1000"
+  ],
+  "columns_new": [
+    "timestamp_ist",
+    "mean",
+    "count",
+    "available_at",
+    "pm25",
+    "location_id",
+    "sensor_id",
+    "station_name",
+    "series_id",
+    "flag_high_1000"
+  ],
+  "added_ts_range": [
+    "2026-11-03 02:00:00+05:30",
+    "2026-11-09 07:00:00+05:30"
+  ]
+}
