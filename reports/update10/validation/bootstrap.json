@@ -1,0 +1,75 @@
+{
+  "n_boot": 10000,
+  "n_origins": 12,
+  "n_rows": 1816,
+  "comparisons": {
+    "B2_vs_B3": {
+      "model_A": "B2",
+      "model_B": "B3",
+      "convention": "sqrtMSE(B)-sqrtMSE(A); positive => A better",
+      "observed_diff": 0.841701378308656,
+      "ci": [
+        -4.169449072786551,
+        5.709515489452677
+      ],
+      "p_A_better": 0.6379
+    },
+    "B2_vs_B4": {
+      "model_A": "B2",
+      "model_B": "B4",
+      "convention": "sqrtMSE(B)-sqrtMSE(A); positive => A better",
+      "observed_diff": 0.841701378308656,
+      "ci": [
+        -4.169449072786551,
+        5.709515489452677
+      ],
+      "p_A_better": 0.6379
+    },
+    "B2_vs_RF": {
+      "model_A": "B2",
+      "model_B": "RF",
+      "convention": "sqrtMSE(B)-sqrtMSE(A); positive => A better",
+      "observed_diff": 17.794052191401413,
+      "ci": [
+        -2.1235985804301722,
+        41.663629069792826
+      ],
+      "p_A_better": 0.8047
+    },
+    "B3_vs_RF": {
+      "model_A": "B3",
+      "model_B": "RF",
+      "convention": "sqrtMSE(B)-sqrtMSE(A); positive => A better",
+      "observed_diff": 16.952350813092757,
+      "ci": [
+        -6.094016447386409,
+        45.23218646765793
+      ],
+      "p_A_better": 0.6899
+    }
+  },
+  "model_rmse_ci": {
+    "B2": [
+      13.263153570489367,
+      32.65867031407384
+    ],
+    "B3": [
+      13.39387130242295,
+      33.42441868971166
+    ],
+    "B4": [
+      13.39387130242295,
+      33.42441868971166
+    ],
+    "RF": [
+      14.62240138500467,
+      66.83591209402864
+    ]
+  },
+  "model_rmse": {
+    "B2": 23.252490568434332,
+    "B3": 24.09419194674299,
+    "B4": 24.09419194674299,
+    "RF": 41.046542759835745
+  }
+}

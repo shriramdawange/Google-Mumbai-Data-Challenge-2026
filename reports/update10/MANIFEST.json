@@ -1,0 +1,81 @@
+{
+  "update10_files": [
+    {
+      "filename": "AdditionalHistory.zip",
+      "size_bytes": 4817970,
+      "sha256": "3233061ca4ac2af39e9f6e80e21d9261b1b8d2fd3b037e5d034bcec059a7e80e",
+      "file_type": "archive"
+    },
+    {
+      "filename": "DataDictionary.txt",
+      "size_bytes": 3581,
+      "sha256": "8786b98f78784e1b53a27cb23c8df64ab92ef76d3be2885098b00c0830a8c985",
+      "file_type": "txt"
+    },
+    {
+      "filename": "Mumbai_Air_Quality_Starter.ipynb",
+      "size_bytes": 376317,
+      "sha256": "e824643f479fe22a4fe67d43c6b73d815b459394584d6d1ff2f0f6cbd797b8b1",
+      "file_type": "ipynb"
+    },
+    {
+      "filename": "SampleSubmission.csv",
+      "size_bytes": 80363,
+      "sha256": "ee4682ce0e546c1b62beb4a08414a5ddc831fa962cff30e8a823d6b6b0e0c72f",
+      "file_type": "csv",
+      "shape": [
+        2592,
+        2
+      ],
+      "columns": [
+        "ID",
+        "Target"
+      ],
+      "nulls": 2592,
+      "dups": 0
+    },
+    {
+      "filename": "Stations (1).csv",
+      "size_bytes": 369,
+      "sha256": "383269fa04abf8f2eb49e5ec0bb5a77c2df11acb6aca996b7edf269a109ee9cf",
+      "file_type": "csv",
+      "shape": [
+        4,
+        6
+      ],
+      "columns": [
+        "location_id",
+        "station_name",
+        "selected_sensor",
+        "latitude",
+        "longitude",
+        "timezone"
+      ],
+      "nulls": 0,
+      "dups": 0
+    },
+    {
+      "filename": "Test.csv",
+      "size_bytes": 296429,
+      "sha256": "e7b9cc8859beb939276c958393e148adae55229c34f99dcb2555fe4ac13b28db",
+      "file_type": "csv",
+      "shape": [
+        2592,
+        7
+      ],
+      "columns": [
+        "ID",
+        "location_id",
+        "sensor_id",
+        "target_start_ist",
+        "target_end_ist",
+        "scoring_block",
+        "unit"
+      ],
+      "nulls": 0,
+      "dups": 0
+    }
+  ],
+  "interim_training": "C:\\Users\\shrir\\OneDrive\\Desktop\\CODE\\Mumbai-Forecasting-Hackathon\\data\\processed\\UPDATE-10\\training_dataset.parquet",
+  "sha256_interim": "5a50da1a0065af35674d5fd2025747a3e25f572418f6e0d1931b7eede4b054c5"
+}

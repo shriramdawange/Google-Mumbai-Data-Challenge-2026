@@ -1,0 +1,61 @@
+{
+  "protected_hashes": {
+    "submissions/baseline_v0.csv": {
+      "expected": "a5e709dce45eaf4cb199765cd5f5b009e43e2465c4a65724b9678c79a1725360",
+      "actual": "a5e709dce45eaf4cb199765cd5f5b009e43e2465c4a65724b9678c79a1725360",
+      "unchanged": true
+    },
+    "submissions/baseline_v0_hgb.csv": {
+      "expected": "eaf4dfc0af17ee0a378637b48aec30381813db492de26348f543ae33a9eecbdc",
+      "actual": "eaf4dfc0af17ee0a378637b48aec30381813db492de26348f543ae33a9eecbdc",
+      "unchanged": true
+    },
+    "reports/m023/validation_oof.csv": {
+      "expected": "b96201eba625c79a36e957b13bceb0f225ceabec291c0e2de067363bdd89af87",
+      "actual": "b96201eba625c79a36e957b13bceb0f225ceabec291c0e2de067363bdd89af87",
+      "unchanged": true
+    },
+    "data/processed/UPDATE-09/training_dataset.parquet": {
+      "expected": "5a50da1a0065af35674d5fd2025747a3e25f572418f6e0d1931b7eede4b054c5",
+      "actual": "5a50da1a0065af35674d5fd2025747a3e25f572418f6e0d1931b7eede4b054c5",
+      "unchanged": true
+    },
+    "UPDATE-10/Test.csv": {
+      "expected": "e7b9cc8859beb939276c958393e148adae55229c34f99dcb2555fe4ac13b28db",
+      "actual": "e7b9cc8859beb939276c958393e148adae55229c34f99dcb2555fe4ac13b28db",
+      "unchanged": true
+    },
+    "UPDATE-10/SampleSubmission.csv": {
+      "expected": "ee4682ce0e546c1b62beb4a08414a5ddc831fa962cff30e8a823d6b6b0e0c72f",
+      "actual": "ee4682ce0e546c1b62beb4a08414a5ddc831fa962cff30e8a823d6b6b0e0c72f",
+      "unchanged": true
+    },
+    "UPDATE-10/Stations (1).csv": {
+      "expected": "383269fa04abf8f2eb49e5ec0bb5a77c2df11acb6aca996b7edf269a109ee9cf",
+      "actual": "383269fa04abf8f2eb49e5ec0bb5a77c2df11acb6aca996b7edf269a109ee9cf",
+      "unchanged": true
+    },
+    "UPDATE-10/AdditionalHistory.zip": {
+      "expected": "3233061ca4ac2af39e9f6e80e21d9261b1b8d2fd3b037e5d034bcec059a7e80e",
+      "actual": "3233061ca4ac2af39e9f6e80e21d9261b1b8d2fd3b037e5d034bcec059a7e80e",
+      "unchanged": true
+    },
+    "UPDATE-10/DataDictionary.txt": {
+      "expected": "8786b98f78784e1b53a27cb23c8df64ab92ef76d3be2885098b00c0830a8c985",
+      "actual": "8786b98f78784e1b53a27cb23c8df64ab92ef76d3be2885098b00c0830a8c985",
+      "unchanged": true
+    },
+    "UPDATE-10/Mumbai_Air_Quality_Starter.ipynb": {
+      "expected": "e824643f479fe22a4fe67d43c6b73d815b459394584d6d1ff2f0f6cbd797b8b1",
+      "actual": "e824643f479fe22a4fe67d43c6b73d815b459394584d6d1ff2f0f6cbd797b8b1",
+      "unchanged": true
+    },
+    "git_tracked_protected": [
+      "submissions/baseline_v0.csv",
+      "submissions/baseline_v0_hgb.csv",
+      "reports/m023/validation_oof.csv",
+      "data/processed/UPDATE-09/training_dataset.parquet"
+    ]
+  },
+  "all_unchanged": true
+}

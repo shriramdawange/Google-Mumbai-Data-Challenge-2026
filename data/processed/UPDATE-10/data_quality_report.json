@@ -1,0 +1,15 @@
+{
+  "test_shape": [
+    2592,
+    7
+  ],
+  "sample_shape": [
+    2592,
+    2
+  ],
+  "stations_shape": [
+    4,
+    6
+  ],
+  "train_present": false
+}

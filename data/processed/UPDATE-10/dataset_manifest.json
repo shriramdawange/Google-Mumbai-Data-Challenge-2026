@@ -1,0 +1,8 @@
+{
+  "source_release": "UPDATE-10-final-release-interim",
+  "interim_source": "C:\\Users\\shrir\\OneDrive\\Desktop\\CODE\\Mumbai-Forecasting-Hackathon\\data\\processed\\UPDATE-09\\training_dataset.parquet",
+  "note": "UPDATE-10/Train.csv was absent at Mission 03 audit; interim training dataset used from UPDATE-09 parquet pending final Train.csv delivery.",
+  "train_rows": 48133,
+  "final_release_claim": "Train contains 48,400 observed station-hours (incl. 7-8 Nov); reconcile when Train.csv delivered.",
+  "cutoff": "2026-11-02 23:00:00+05:30"
+}

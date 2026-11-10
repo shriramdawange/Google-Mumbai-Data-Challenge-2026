@@ -76,6 +76,16 @@ def infer(parquet_path, test_path, selected_model="B2"):
               model_in_supported_set=True)
     return out, diag
 
+def final_infer(parquet_path, test_path, selected_model="B2", out_path=None, diag_path=None):
+    """Final inference: run B2 (or selected) over full Test and optionally write candidate CSV + diagnostics."""
+    out, diag = infer(parquet_path, test_path, selected_model=selected_model)
+    if out_path is not None:
+        cand = pd.DataFrame(dict(ID=out["ID"].values, Target=out["Target"].values))
+        cand.to_csv(out_path, index=False)
+    if diag_path is not None:
+        with open(diag_path, "w") as f: json.dump(diag, f, indent=2)
+    return out, diag
+
 def main():
     parquet=os.path.join(ROOT,"data","processed","UPDATE-09","training_dataset.parquet")
     test=os.path.join(ROOT,"UPDATE-09","Test.csv")
