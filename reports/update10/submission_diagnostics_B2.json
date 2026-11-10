@@ -1,0 +1,27 @@
+{
+  "selected_model": "B2",
+  "parquet_path": "data/processed/UPDATE-10/training_dataset.parquet",
+  "test_path": "UPDATE-10/Test.csv",
+  "train_max": "2026-11-10 09:00:00+05:30",
+  "private_rows": 192,
+  "private_hours": 48,
+  "private_leads": [
+    16,
+    63
+  ],
+  "inference_target_rows": 2592,
+  "inference_full_rows": 2592,
+  "inference_mean": 64.52617820737866,
+  "inference_min": 41.79657587547079,
+  "inference_max": 121.13494095574592,
+  "supported_models": [
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "supported_leads": [
+    1,
+    400
+  ],
+  "model_in_supported_set": true
+}

@@ -1,8 +1,15 @@
 {
-  "source_release": "UPDATE-10-final-release-interim",
-  "interim_source": "C:\\Users\\shrir\\OneDrive\\Desktop\\CODE\\Mumbai-Forecasting-Hackathon\\data\\processed\\UPDATE-09\\training_dataset.parquet",
-  "note": "UPDATE-10/Train.csv was absent at Mission 03 audit; interim training dataset used from UPDATE-09 parquet pending final Train.csv delivery.",
-  "train_rows": 48133,
-  "final_release_claim": "Train contains 48,400 observed station-hours (incl. 7-8 Nov); reconcile when Train.csv delivered.",
-  "cutoff": "2026-11-02 23:00:00+05:30"
+  "source_release": "UPDATE-10",
+  "source": "UPDATE-10/Train.csv (final release, actual; Mission 03.1 RESUME)",
+  "source_sha256": "8adbcf55315f166d7dc3d1d3e4d7400651f26c1d8b95ff387eef38f4e70a283",
+  "source_rows": 48400,
+  "source_cutoff": "2026-11-10 09:00:00+05:30",
+  "interim_source": "C:/Users/shrir/OneDrive/Desktop/CODE/Mumbai-Forecasting-Hackathon\\data/processed/UPDATE-09/training_dataset.parquet",
+  "interim_note": "Interim source used before final Train.csv delivery; superseded during Mission 03.1 RESUME.",
+  "final_release_claim": "Train contains 48,400 observed station-hours (incl. 7-8 Nov)",
+  "train_rows": 48400,
+  "final_parquet": "C:/Users/shrir/OneDrive/Desktop/CODE/Mumbai-Forecasting-Hackathon\\data/processed/UPDATE-10/training_dataset.parquet",
+  "final_parquet_sha256": "5622cb0d7a4dfacf03655643a8941e3d4577186171bf53a848369cd25d5c229e",
+  "cutoff": "2026-11-10 09:00:00+05:30",
+  "notes": "Manifest reconciled during Mission 03.2 FINAL MODEL CHALLENGER against actual final UPDATE-10 training data."
 }
