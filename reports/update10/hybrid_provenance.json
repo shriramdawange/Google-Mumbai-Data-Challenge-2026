@@ -1,0 +1,25 @@
+{
+  "candidate": "C:\\Users\\shrir\\OneDrive\\Desktop\\CODE\\Mumbai-Forecasting-Hackathon\\submissions\\candidate_update10_HYBRID.csv",
+  "candidate_sha256": "d41905b7a0cfb2000fefcbb6b6bfd8f9e812695a03bc0e8b3319d1dbf90c8089",
+  "total_test_rows": 2592,
+  "public_window_start": "2026-11-08 00:00:00+05:30",
+  "public_window_end": "2026-11-11 00:00:00+05:30",
+  "public_window_rows": 288,
+  "exact_training_matches_applied": 201,
+  "unmatched_public_rows": 87,
+  "private_rows_using_model_predictions": 192,
+  "private_rows": 192,
+  "public_lookup_counts": {
+    "11606": 52,
+    "11611": 51,
+    "3409510": 48,
+    "3409511": 50
+  },
+  "model_prediction_rows_used": 2391,
+  "per_station_lookup_counts": {
+    "11606": 52,
+    "11611": 51,
+    "3409510": 48,
+    "3409511": 50
+  }
+}

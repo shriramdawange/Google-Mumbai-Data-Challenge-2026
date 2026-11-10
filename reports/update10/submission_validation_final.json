@@ -1,5 +1,5 @@
 {
-  "candidate_sha256": "417cbceee739b3d4f395a0b102bf49d510b1e16efb54123bc6b1539c708d1f52",
+  "candidate_sha256": "d41905b7a0cfb2000fefcbb6b6bfd8f9e812695a03bc0e8b3319d1dbf90c8089",
   "checks": {
     "row_count_ok": true,
     "columns_ok": true,
@@ -13,8 +13,8 @@
     "all_test_ids_present": true,
     "target_range_ok": true
   },
-  "target_min": 41.79657587547079,
-  "target_max": 121.13494095574592,
-  "target_mean": 64.52617820737866,
+  "target_min": 5.7275,
+  "target_max": 794.77,
+  "target_mean": 66.52995785718439,
   "rows": 2592
 }
