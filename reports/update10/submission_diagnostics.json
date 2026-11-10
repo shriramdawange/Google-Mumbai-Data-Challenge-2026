@@ -1,6 +1,6 @@
 {
   "selected_model": "B2",
-  "parquet_path": "data/processed/UPDATE-10/training_dataset.parquet",
+  "parquet_path": "data/processed/UPDATE-09/training_dataset.parquet",
   "test_path": "UPDATE-10/Test.csv",
   "train_max": "2026-11-09 07:00:00+05:30",
   "private_rows": 192,

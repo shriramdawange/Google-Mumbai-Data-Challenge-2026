@@ -145,6 +145,23 @@ Audit output: `reports/update10/protected_audit.json`.
 
 ---
 
+## MISSION 03.1 RESUME UPDATE (2026-11-10)
+
+Following the arrival of the final training data (commit `462fb90`, pushed), the pipeline was re-executed:
+
+1. `UPDATE-10/Train.csv` audited: **48,400 rows** ✓ (final-data-dictionary claim matched exactly), SHA `8adbcf55…70a283`, cutoff `2026-11-10 09:00:00+05:30`, 4 stations, 0 dup keys, 0 nulls.
+2. `src/update10_integrate.py` fixed: now consumes **actual** `UPDATE-10/Train.csv` (union with old snapshot; new wins; added=551, removed=0); parquet regenerated from real data.
+3. Private forecast horizon re-derived from new cutoff: **T+16 … T+63** (was T+42–T+89 under interim source).
+4. Model validation re-run on actual final data (n=1896): **B3 selected** (pooled RMSE 19.7565; B2 20.6272; B4 19.7565; RF 51.8160; w=0.35, β=0.0).
+5. Final inference regenerated with selected model **B3** → new candidate.
+6. New final candidate validated: **ALL PASS** — `submissions/candidate_update10_final.csv`, SHA256 `e059e4ba073e7743d0802330f4ffa1128fc285c5c0b068721c3d11c153ac4a40`, mean 41.78, min 27.99, max 75.00, 192/192 private IDs covered.
+7. Old candidate preserved: `submissions/candidate_update10.csv` (SHA `823222a2…c6148`, interim B2) — restored byte-identically.
+8. Protected artifacts re-verified: **UNCHANGED**.
+
+**Final state (Mission 03.1 RESUME):** final candidate = `submissions/candidate_update10_final.csv` (B3, SHA `e059e4ba…a40`); old candidate preserved = `submissions/candidate_update10.csv` (SHA `823222a2…c6148`); no commit/push/submit performed during this resume.
+
+---
+
 ## Final chain of evidence summary
 
 1. UPDATE-10 integration → `reports/update10/INTEGRATION.md` etc.

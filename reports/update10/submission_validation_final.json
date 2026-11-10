@@ -1,0 +1,20 @@
+{
+  "candidate_sha256": "e059e4ba073e7743d0802330f4ffa1128fc285c5c0b068721c3d11c153ac4a40",
+  "checks": {
+    "row_count_ok": true,
+    "columns_ok": true,
+    "id_sequence_ok": true,
+    "id_unique_ok": true,
+    "missing_predictions_ok": true,
+    "nan_inf_ok": true,
+    "nonnegative_ok": true,
+    "private_scored_ids_covered": true,
+    "public_scored_ids_covered": true,
+    "all_test_ids_present": true,
+    "target_range_ok": true
+  },
+  "target_min": 27.987213214577626,
+  "target_max": 75.00126426870966,
+  "target_mean": 41.776628029052965,
+  "rows": 2592
+}

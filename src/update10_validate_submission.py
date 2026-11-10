@@ -1,11 +1,13 @@
-"""MISSION 03 Stage G: independent validation of submissions/candidate_update10.csv against UPDATE-10 Test.csv."""
-import os, json, hashlib
+"""MISSION 03 / 03.1 Stage G: independent validation of submissions candidate vs UPDATE-10 Test.csv."""
+import os, json, hashlib, sys
 import numpy as np, pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CAND = os.path.join(ROOT, "submissions", "candidate_update10.csv")
+CAND = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "submissions", "candidate_update10.csv")
 TEST = os.path.join(ROOT, "UPDATE-10", "Test.csv")
 RPT = os.path.join(ROOT, "reports", "update10")
 V = os.path.join(RPT, "validation")
+DIAG = sys.argv[2] if len(sys.argv) > 2 else os.path.join(RPT, "submission_diagnostics_final.json")
+VALMD = sys.argv[3] if len(sys.argv) > 3 else os.path.join(RPT, "SUBMISSION_VALIDATION_FINAL.md")
 
 def sha(p):
     h = hashlib.sha256()
@@ -15,6 +17,7 @@ def sha(p):
 
 cand = pd.read_csv(CAND)
 te = pd.read_csv(TEST, parse_dates=["target_start_ist", "target_end_ist"])
+diag = json.load(open(DIAG))
 checks = {}
 checks["row_count_ok"] = (len(cand) == len(te))
 checks["columns_ok"] = (list(cand.columns) == ["ID", "Target"])
@@ -31,9 +34,8 @@ checks["public_scored_ids_covered"] = bool(pub_ids.issubset(cand_ids))
 checks["all_test_ids_present"] = bool(cand_ids >= set(te["ID"].astype(str).tolist()))
 t = cand["Target"].to_numpy(dtype=float)
 checks["target_range_ok"] = bool((t >= 0).all() and np.isfinite(t).all())
-diag = json.load(open(os.path.join(RPT, "submission_diagnostics.json")))
-lines = ["# UPDATE-10 Submission Candidate Validation (Mission 03, Stage G)", "",
-         f"- Candidate: `submissions/candidate_update10.csv`", f"- SHA256: `{sha(CAND)}`", "",
+lines = ["# UPDATE-10 Submission Candidate Validation (Mission 03 / 03.1 RESUME)", "",
+         f"- Candidate: `{CAND}`", f"- SHA256: `{sha(CAND)}`", "",
          "## Independent validation checks", "",
          "| check | status |", "|---|---|"]
 for k, v in checks.items():
@@ -45,7 +47,7 @@ lines += ["", "## Candidate summary", "",
           f"- private rows covered: {len(priv_ids & cand_ids)} / {len(priv_ids)}", "",
           "## Submission diagnostics", "",
           json.dumps(diag, indent=2), "", ""]
-open(os.path.join(RPT, "SUBMISSION_VALIDATION.md"), "w").write("\n".join(lines))
-json.dump(dict(candidate_sha256=sha(CAND), checks={k: bool(v) for k, v in checks.items()}, target_min=float(np.min(t)), target_max=float(np.max(t)), target_mean=float(np.mean(t)), rows=int(len(cand))), open(os.path.join(RPT, "submission_validation.json"), "w"), indent=2)
+open(VALMD, "w").write("\n".join(lines))
+json.dump(dict(candidate_sha256=sha(CAND), checks={k: bool(v) for k, v in checks.items()}, target_min=float(np.min(t)), target_max=float(np.max(t)), target_mean=float(np.mean(t)), rows=int(len(cand))), open(os.path.join(RPT, "submission_validation_final.json"), "w"), indent=2)
 print("\n".join(lines))
 print("ALL_PASS=", all(checks.values()))

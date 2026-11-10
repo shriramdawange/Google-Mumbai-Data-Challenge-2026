@@ -141,6 +141,8 @@ def main():
                      model_rmse_ci={c: [float(np.percentile(rm[c], 2.5)), float(np.percentile(rm[c], 97.5))] for c in rm},
                      model_rmse={c: rmse(ev.y, ev[col[c]]) for c in rm})
     with open(os.path.join(V, "bootstrap.json"), "w") as f: json.dump(bootstrap, f, indent=2)
+    with open(os.path.join(V, "shrinkage.json"), "w") as f:
+        json.dump(dict(w=float(w), beta=float(beta), early_folds=[int(x) for x in early]), f, indent=2)
     # ---------- MODEL_SELECTION.md ----------
     best = min(mrows, key=lambda r: r["rmse"])
     lines = ["# UPDATE-10 Model Selection (Mission 03, Stage D)", "", "## Setup", "",

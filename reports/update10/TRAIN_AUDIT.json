@@ -1,0 +1,51 @@
+{
+  "path": "C:\\Users\\shrir\\OneDrive\\Desktop\\CODE\\Mumbai-Forecasting-Hackathon\\UPDATE-10\\Train.csv",
+  "exists": true,
+  "sha256": "8adbcf55315f166d7dc3dc1d3e4d7400651f26c1d8b95ff387eef38f4e70a283",
+  "size_bytes": 6837802,
+  "raw_shape": [
+    48400,
+    10
+  ],
+  "columns": [
+    "timestamp_ist",
+    "mean",
+    "count",
+    "available_at",
+    "pm25",
+    "location_id",
+    "sensor_id",
+    "station_name",
+    "series_id",
+    "flag_high_1000"
+  ],
+  "timestamp_min": "2025-02-19 03:00:00+05:30",
+  "timestamp_max": "2026-11-10 09:00:00+05:30",
+  "n_stations": 4,
+  "stations": [
+    11606,
+    11611,
+    3409510,
+    3409511
+  ],
+  "n_rows": 48400,
+  "dup_keys": 0,
+  "nulls": {
+    "timestamp_ist": 0,
+    "mean": 0,
+    "count": 0,
+    "available_at": 0,
+    "pm25": 0,
+    "location_id": 0,
+    "sensor_id": 0,
+    "station_name": 0,
+    "series_id": 0,
+    "flag_high_1000": 0
+  },
+  "pm25_min": 0.0,
+  "pm25_max": 241587.56333333332,
+  "pm25_negative": 0,
+  "pm25_mean": 44.20747140151515,
+  "flag_high_1000": 19,
+  "count_min": 3
+}

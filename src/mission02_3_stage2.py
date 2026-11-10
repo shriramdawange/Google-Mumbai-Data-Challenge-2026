@@ -42,22 +42,31 @@ def infer(parquet_path, test_path, selected_model="B2"):
     df=_load_training(parquet_path)
     df, te, train_max, leads, priv = _validate_inputs(df, test_path)
     from mission02_2 import window_stats, hour_profile
+    shrink_path=os.path.join(ROOT,"reports","update10","validation","shrinkage.json")
+    shrink=json.load(open(shrink_path)) if os.path.exists(shrink_path) else dict(w=0.35,beta=0.0)
+    w=float(shrink.get("w",0.35)); beta=float(shrink.get("beta",0.0))
     preds={}
     for loc,g in df.groupby("location_id"):
         s=g.set_index("timestamp_ist")["pm25_clean"].sort_index()
         st90=window_stats(s,train_max,90)
         if pd.isna(st90["mean"]) or st90["n"]<24:
             raise ValueError(f"missing station history for {loc} at cutoff {train_max}")
-        lv=window_stats(s,train_max,7)["mean"]
+        st7=window_stats(s,train_max,7)
+        lv=float(st7["mean"])
         if pd.isna(lv):
             raise ValueError(f"missing 7d level for {loc} at cutoff {train_max}")
         prof,_=hour_profile(s,train_max,90); norm=prof/(float(prof.mean()) if len(prof) else 1.0)
-        preds[int(loc)]=(float(lv),norm)
+        preds[int(loc)]=dict(fast=float(st7["mean"]),slow=float(st90["mean"]),norm=norm)
     rows=[]
     for _,r in te.iterrows():
-        loc=int(r["location_id"]); h=int(r["target_end_ist"].hour)
-        lv,norm=preds[loc]
-        t=float(max(0.0, lv*float(norm.get(h,1.0))))
+        loc=int(r["location_id"]); h=int(r["target_end_ist"].hour); e=preds[loc]
+        n=float(e["norm"].get(h,1.0))
+        if selected_model=="B2":
+            t=float(max(0.0, e["fast"]*n))
+        else:
+            fast=float(e["fast"])*n; slow=float(e["slow"])*n
+            b3=float(w*fast+(1.0-w)*slow)
+            t=float(max(0.0, b3+beta*(fast-slow))) if selected_model=="B4" else float(max(0.0,b3))
         rows.append(dict(ID=r["ID"], Target=float(t), location_id=loc,
                          lead=int((r["target_end_ist"]-train_max).total_seconds()//3600)))
     out=pd.DataFrame(rows)
